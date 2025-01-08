@@ -1,0 +1,31 @@
+{
+  "name": "monk-ecomm-coupons-task",
+  "version": "1.0.0",
+  "description": "Assignment for Monk Ecommerce",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hritambh/monk-ecomm-coupons-task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hritambh/monk-ecomm-coupons-task/issues"
+  },
+  "homepage": "https://github.com/hritambh/monk-ecomm-coupons-task#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.3",
+    "nodemon": "^3.1.9"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
