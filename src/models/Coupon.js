@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
 const couponSchema = new mongoose.Schema({
+    _id: { 
+        type: String, 
+        required: true 
+    },
    type: {
        type: String,
        enum: ["cart-wise", "product-wise", "BxGy"],
@@ -29,6 +33,8 @@ const couponSchema = new mongoose.Schema({
        type: Date,
        default: Date.now,
    },
+}, { 
+    timestamps: true 
 });
 
 module.exports = mongoose.model("Coupon", couponSchema);
