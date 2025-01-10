@@ -98,8 +98,10 @@ exports.applyCoupon = async (req, res) => {
         }
        }
 
+       // similiarly logics can be added for BxGy and product-wise
+
        res.json({cart});
-   } catch (err) {
+    } catch (err) {
        res.status(500).json({ error: err.message });
    }
 };
