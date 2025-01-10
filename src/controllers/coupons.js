@@ -1,6 +1,6 @@
 const Coupon = require("../models/Coupon");
 
-// Create a new coupon
+// Creating a new coupon
 exports.createCoupon = async (req, res) => {
     console.log("Creating Coupon with req body :: " ,req.body );
     const existingCoupon = await Coupon.findById(req.body._id);
@@ -16,7 +16,7 @@ exports.createCoupon = async (req, res) => {
    }
 };
 
-// Retrieve all coupons
+// Fetching all coupons
 exports.getCoupons = async (req, res) => {
     console.log("Hello");
    try {
@@ -27,7 +27,7 @@ exports.getCoupons = async (req, res) => {
    }
 };
 
-// Retrieve a specific coupon
+// Fetching a specific coupon
 exports.getCouponById = async (req, res) => {
    try {
        const coupon = await Coupon.findById(req.params.id);
@@ -38,7 +38,7 @@ exports.getCouponById = async (req, res) => {
    }
 };
 
-// Update a coupon
+// Updating a coupon
 exports.updateCoupon = async (req, res) => {
    try {
        const coupon = await Coupon.findByIdAndUpdate(req.params.id, req.body, {
@@ -51,7 +51,7 @@ exports.updateCoupon = async (req, res) => {
    }
 };
 
-// Delete a coupon
+// Deleting a coupon
 exports.deleteCoupon = async (req, res) => {
    try {
        const coupon = await Coupon.findByIdAndDelete(req.params.id);
@@ -62,10 +62,10 @@ exports.deleteCoupon = async (req, res) => {
    }
 };
 
-// Fetch applicable coupons
+// Fetching applicable coupons
 exports.getApplicableCoupons = async (req, res) => {
    try {
-       const { cart } = req.body; // Assume cart contains products and total value
+       const { cart } = req.body; // Assuming cart contains products and total value
        const coupons = await Coupon.find();
 
        const applicableCoupons = coupons.filter((coupon) => {
